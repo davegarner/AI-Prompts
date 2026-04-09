@@ -1,0 +1,296 @@
+can you create me a new html based website based on the green terminal based on fallout.  I will host this site on IIS 10 at the root (windows server 2025)   
+
+The core pages will be as follows
+
+Site wide
+enable the site so that when i update the headder and footer it is replicated through all of the pages.
+The site should be displayed fully on a single screen without any scrolling
+
+Home page
+“Type‑in” intro animation on Home (auto typing with cursor) if possible include the following information:
+IP Address of the client
+Browser information from the headder
+Time and date
+The home page will contain links to all of the other pages displayed as cards and implement deep linking, please create some sample content and links.
+Please ensure the links at the top of the page you create are centered
+
+News page
+The news page will contain links to news stories i create in rich markdown format, when an item is clicked on it will open in terminal-esque screen modal display
+Please create some sample news pages.
+
+Projects page
+The projects page will follow the same format at the news page, please create some sample projects using the rich markdown engine.
+
+
+About page
+Use rich markdown for this page so that i can edit with ease.  Display this page as a modal that doesnt go beyond the page, the modal can be scrolled rather than the main page
+
+also create the following sub site called "Tools" with the following pages:
+
+password generator
+This page will be used to generate passwords in the with the following requirements
+3 blocks of 6 letters seperated by a hyphen
+each block contains unique letters all lower case
+change any of the 2 letters in the whole 3 blocks to be a number and uppercase letters
+as part of the form, add fields to create username and website
+create buttons to download the password and fields into a csv file
+
+Downloads
+What: Host files (pdf, zip, assets) with checksums and short notes.
+Model: content/downloads/downloads.json → direct links in assets/ or external URLs.
+UI: List with file size and optional SHA256; click to download (no modal needed).
+
+
+Gallery (Images or ASCII)
+What: Screens, posters, concept art or ASCII art.
+Model: content/gallery/gallery.json → entries referencing image files or embedded ASCII in Markdown.
+UI: Grid → click shows full details in modal; green tint via CSS filters.
+
+Contact & Keys
+What: A contact page with PGP public key / fingerprints, social links, and a simple contact method.
+Model: content/contact.md
+UI: Markdown panel (no modal necessary).
+
+Please ensure that links to the main site also continue to work when clicked from within the tools sub site
+
+
+
+for additional settings create:
+create different themes that switch the colour, offer several different colours such as a blue hue, lighter green hue, yellow hue, orange hue.
+Search/filter on News/Projects
+can you center the page within the browser and also allow it to work well in a mobile browser.
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+
+
+What’s included
+Core site
+
+
+Home page
+
+Fallout-style green terminal theme
+Auto type-in intro animation with blinking cursor
+Navigation cards to all main sections
+Deep-link examples to sample News / Projects / About modal entries
+
+
+
+News page
+
+Loads content from:
+
+/content/news/news.json
+/content/news/*.md
+
+
+Search + filter
+Click an item to open it in a terminal modal
+Includes sample news stories
+
+
+
+Projects page
+
+Same pattern as News
+Loads from:
+
+/content/projects/projects.json
+/content/projects/*.md
+
+
+10 sample projects
+Search + filter
+Modal display using the Markdown renderer
+
+
+
+About page
+
+Markdown-driven content from /content/about.md
+Opens in a scrollable modal
+Modal stays within the viewport, with modal-body scrolling rather than page scrolling
+
+
+
+Tools subsite
+
+
+/tools/index.html
+
+
+Password Generator
+
+Generates password format:
+
+xxxxxx-xxxxxx-xxxxxx
+
+
+Each block starts with unique lowercase letters
+Then two characters across the full password are changed:
+
+one to uppercase
+one to a digit
+
+
+Fields for:
+
+Username
+Website
+
+
+Buttons for:
+
+Generate
+Copy
+Download CSV
+
+
+
+
+
+Downloads
+
+JSON-driven listing from /content/downloads/downloads.json
+Displays:
+
+direct links
+size
+type
+optional SHA256
+notes
+
+
+Includes sample downloadable assets
+
+
+
+Gallery
+
+JSON-driven gallery from /content/gallery/gallery.json
+Supports:
+
+images
+ASCII / Markdown entries
+
+
+Click opens a detail modal
+Includes green tint styling
+
+
+
+Contact & Keys
+
+Markdown page from /content/contact.md
+Intended for:
+
+PGP public key
+fingerprints
+social links
+simple contact instructions
+
+
+
+
+
+
+Site-wide features included
+
+
+Shared header/footer
+
+Stored in:
+
+/partials/header.html
+/partials/footer.html
+
+
+These are loaded across all pages so updating them updates the whole site
+
+
+
+Theme switcher
+
+Included presets:
+
+green
+blue
+light green
+yellow
+orange
+
+
+
+
+
+Centered layout
+
+Main site frame is centered in the browser
+
+
+
+Responsive / mobile-friendly
+
+Mobile nav toggle
+stacked cards on smaller screens
+modals sized correctly for phones
+tools pages remain usable on narrow screens
+
+
+
+Main-site links work from the Tools subsite
+
+I used root-relative links so navigation back to /index.html, /news/, etc. still works from within /tools/...
+
+
+
+
+Important files you’ll likely edit most
+Global layout
+
+/partials/header.html
+/partials/footer.html
+
+Main content
+
+/content/about.md
+/content/news/news.json
+/content/news/*.md
+/content/projects/projects.json
+/content/projects/*.md
+
+Tools content
+
+/content/downloads/downloads.json
+/content/gallery/gallery.json
+/content/gallery/*.md
+/content/contact.md
+
+Styling / behaviour
+
+/assets/css/styles.css
+/assets/js/app.js
+/assets/js/markdown.js
+
+
+IIS deployment notes
+Copy the ZIP contents into your IIS root, for example:
+C:\inetpub\wwwroot\
+Included in the package:
+
+web.config
+default index.html
+static assets
+content JSON / Markdown files
+
+So it should be ready to serve as a static site on IIS 10 at root.
