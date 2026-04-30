@@ -1,0 +1,105 @@
+-----------------------------------------------------
+Fallout Based Green Terminal Web Template Prompt
+
+New Prompt testing entra id without tube status
+-----------------------------------------------------
+
+
+
+
+-----------------------------
+Prompt
+-----------------------------
+
+
+can you create me a new html based website based on the green terminal based on fallout.  I will host this site on IIS 10 at the root (windows server 2025)   
+
+Design Goals
+
+
+Shared components for header and footer
+Markdown-first editing for content-heavy pages
+Terminal-style modals
+Theme support for different hues and operator preferences
+Each Page is templated and can be duplicated when additional pages are required
+Navigation links can be updated easily from a central point such as the headder
+Allow for display on Mobile OS
+entra ID integration for secure site
+
+Non-secure pages
+Site wide
+Header and Footer pages that are displayed on every page so they can be updated centrally
+
+Each Page is templated and can be duplicated when additional pages are required
+Navigation links can be updated easily from a central point in the header
+
+Home page
+Please ensure the links in the header are centered
+
+"Type‑in" intro animation on Home (auto typing with cursor) if possible include the following information:
+Browser information from the headder
+Current time and date
+
+About page
+Use rich markdown for this page so that i can edit with ease.
+
+
+Secure pages
+
+Create login page that integrates to entra ID
+
+
+
+News page
+The news page will contain links to news stories i create in rich markdown format, when an item is clicked on it will open in terminal-esque screen modal display.
+Please create some sample news pages.
+
+Projects page
+The projects page will follow the same format at the news page, please create some sample projects using the rich markdown engine.
+
+
+
+Create 2 sub sites:
+1: Tools
+For each tool, use dedicated .js files for each tool so that the mail app.js file does not become too large
+this site contains the following pages
+
+password generator
+This page will be used to generate passwords in the with the following requirements
+3 blocks of 6 letters seperated by a hyphen
+each block contains unique letters all lower case
+change any of the 2 letters in the whole 3 blocks to be a number and uppercase letters
+as part of the form, add fields to create username and website
+create buttons to download the password and fields into a csv file
+
+
+Downloads
+What: Host files (pdf, zip, assets) with checksums and short notes.
+Model: content/downloads/downloads.json → direct links in assets/ or external URLs.
+UI: List with file size and optional SHA256; click to download (no modal needed).
+
+
+Gallery (Images or ASCII)
+What: Screens, posters, concept art or ASCII art.
+Model: content/gallery/gallery.json → entries referencing image files or embedded ASCII in Markdown.
+UI: Grid → click shows full details in modal; green tint via CSS filters.
+
+Contact & Keys
+What: A contact page with PGP public key / fingerprints, social links, and a simple contact method.
+Model: content/contact.md
+UI: Markdown panel (no modal necessary).
+
+Please ensure that links to the main site also continue to work when clicked from within the tools sub site
+
+The second site is:
+2: Travel
+
+Keep this in the same format as the tools subsite, it will contain 3 pages that we will develop later in the project.  
+for now create placeholder pages for this work.
+
+
+
+for additional settings create:
+create different themes that switch the colour, offer several different colours such as a blue hue, lighter green hue, yellow hue, orange hue.
+Search/filter on News/Projects
+can you center the page within the browser and also allow it to work well in a mobile browser.
