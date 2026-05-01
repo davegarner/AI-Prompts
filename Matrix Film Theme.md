@@ -13,7 +13,7 @@ can you create me a new html based website based on the matrix film franchise.  
 The core pages will be as follows
 
 Home page
-“Type‑in” intro animation on Home (auto typing with cursor)
+"Type-in" intro animation on Home (auto typing with cursor)
 The home page will contain links to all of the other pages, please create some sample content and links
 
 News page
