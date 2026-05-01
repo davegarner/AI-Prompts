@@ -73,7 +73,7 @@ can you center the page within the browser and also allow it to work well in a m
 
 
 
-What’s included
+What's included
 Core site
 
 
